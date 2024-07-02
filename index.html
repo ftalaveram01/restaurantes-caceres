@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Restaurantes Cáceres</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#favoritos">FAVORITOS</a></li>
+            <li><img src="pictures/icon.png" alt=""></li>
+            <li><a href="#otros">OTROS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+        <button class="menu-toggle" id="show">&#9776;</button>
+        <dialog id="menu">
+            <ol>
+                <li><img src="pictures/icon.png" alt=""></li>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#favoritos">FAVORITOS</a></li>
+                <li><a href="#otros">OTROS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ol>
+            <button id="hide">&times;</button>
+        </dialog>
+        <script>
+            window.show.addEventListener('click', () => {
+                window.menu.showModal();
+            })
+            window.hide.addEventListener('click', () => {
+                window.menu.close()
+            })
+        </script>
+    </nav>
+    <article>
+        <section id="inicio">
+            <h2>RESTAURANTES CÁCERES</h2>
+            <ul class="icon-container">
+                <li class="icon"><img src="pictures/taco.png" alt="Icono de un taco"></li>
+                <li class="icon"><img src="pictures/hamburguesa.png" alt="Icono de una hamburguesa"></li>
+                <li class="icon"><img src="pictures/fideos.png" alt="Icono de unos fideos"></li>
+            </ul>
+        </section>
+        <section id="favoritos">
+            <h2>FAVORITOS</h2>
+            <p class="aviso">PRECIOS POR PERSONA</p>
+            <div class="restaurantes">
+                <div class="local">
+                    <img src="pictures/tacosLoren.webp" alt="Foto de unos tacos de 'Tacos Doña Loren'">
+                    <p class="nombreLocal">Tacos Doña Loren</p>
+                    <p>Precio medio: 20€</p>
+                    <a href="https://tacosdonaloren.com/wp-content/uploads/2022/06/carta_dona_loren_caceres_2022.pdf" class="link" target="_blank">LINK</a>
+                </div>
+                <div class="local">
+                    <img src="pictures/sibuya.png" alt="Foto de plato de 'Sibuya Urban Sushi Bar'">
+                    <p class="nombreLocal">Sibuya Urban Sushi Bar</p>
+                    <p>Precio medio: 25€</p>
+                    <a href="https://amikasa.sibuyaurbansushibar.com/order/9690/sibuya-urban-sushi-bar/multiple-orders" class="link" target="_blank">LINK</a>
+                </div>
+                <div class="local">
+                    <img src="pictures/cubano.png" alt="Foto de plato de 'Capricho Habanero'">
+                    <p class="nombreLocal">Capricho Habanero</p>
+                    <p>Precio medio: 20€</p>
+                    <a href="https://lachy84.wixsite.com/website/menus" class="link" target="_blank">LINK</a>
+                </div>
+                <div class="local">
+                    <img src="pictures/zalacain.png" alt="Foto de un plato de 'Zalacain'">
+                    <p class="nombreLocal">Zalacain</p>
+                    <p>Precio medio: 15€</p>
+                    <a href="https://carta.menu/restaurants/caceres-1/taperia-zalacain/m/menu-completo" class="link" target="_blank">LINK</a>
+                </div>
+                <div class="local">
+                    <img src="pictures/malaje.png" alt="Foto de un plato de 'Malaje'" target="_blank">
+                    <p class="nombreLocal">Malaje</p>
+                    <p>Precio medio: 15€</p>
+                    <a href="https://es.restaurantguru.com/Malaje-Caceres/menu" class="link" target="_blank">LINK</a>
+                </div>
+            </div>
+        </section>
+        <section id="otros">
+            <h2>OTROS</h2>
+            <p class="aviso">PRECIOS POR PERSONA</p>
+            <div class="restaurantes">
+                <div class="local">
+                    <img src="pictures/tacosLoren.webp" alt="Foto de unos tacos de 'Tacos Doña Loren'">
+                    <p class="nombreLocal">Tacos Doña Loren</p>
+                    <p>Precio medio: 40€</p>
+                    <a href="" class="link" target="_blank">LINK</a>
+                </div>
+                <div class="local">
+                    <img src="pictures/tacosLoren.webp" alt="Foto de unos tacos de 'Tacos Doña Loren'">
+                    <p class="nombreLocal">Tacos Doña Loren</p>
+                    <p>Precio medio: 40€</p>
+                    <a href="" class="link" target="_blank">LINK</a>
+                </div>
+                <div class="local">
+                    <img src="pictures/tacosLoren.webp" alt="Foto de unos tacos de 'Tacos Doña Loren'">
+                    <p class="nombreLocal">Tacos Doña Loren</p>
+                    <p>Precio medio: 40€</p>
+                    <a href="" class="link" target="_blank">LINK</a>
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>CONTACTO</h2>
+            <form action="#">
+
+                <div class="formObject">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                
+                <div class="formObject">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required>
+                </div>
+                
+                <div class="formObject">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+                </div>
+                <div id="enviar">
+                    <button class="link" type="submit">ENVIAR</button>
+                </div>
+            </form>
+        </section>
+    </article>
+    <footer>
+        <a href="https://www.linkedin.com/in/fernando-talavera-mostazo-986297279/" target="_blank">👨‍💻Made by ftalaveram👨‍💻</a>
+    </footer>
+</body>
+</html>
